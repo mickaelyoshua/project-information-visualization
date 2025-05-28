@@ -10,3 +10,8 @@ create_venv:
 .PHONY: install_deps
 install_deps: requirements.txt
 	$(VENV_BIN)/pip install -r requirements.txt
+
+# Clean up virtual environment
+.PHONY: clean_venv
+clean_venv:
+	rm -rf $(VENV_NAME)
